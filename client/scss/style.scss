@@ -1,0 +1,91 @@
+///
+/// \file   style.scss
+/// \brief  The styling for our application.
+///
+
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+// Media Query
+$small-screen: "only screen and (max-width: 768px)";
+
+// Margin and Padding Reset
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+// Page Body
+body {
+    background-color: darkblue;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+// Application Body
+.app-body {
+    width: 85%;
+    max-width: 960px;
+    margin: 8px auto 0px auto;
+    padding: 8px;
+    background-color: lightblue;
+    border-radius: 16px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+
+    @media #{$small-screen} {
+        width: 100%;
+        margin: 0px auto;
+        border-radius: 2px;
+    }
+
+    .app-header {
+        text-align: center;
+        padding: 8px 0px;
+    }
+
+    .app-description {
+        text-align: center;
+        font-style: italic;
+        padding-bottom: 8px;
+    }
+
+    .app-instructions {
+        text-align: center;
+    }
+
+    .app-form {
+        padding: 16px 0px;
+
+        .app-file-input {
+            display: block;
+            width: 50%;
+            margin: 0px auto;
+            padding: 16px 4px;
+            border: 1px solid black;
+            border-radius: 2px;
+
+            @media #{$small-screen} {
+                width: 95%;
+            }
+        }
+
+        .app-submit-button {
+            display: block;
+            width: 30%;
+            margin: 8px auto 0px auto;
+            padding: 16px 4px;
+            border: 1px solid darkgreen;
+            border-radius: 2px;
+            background-color: lightgreen;
+
+            &:hover {
+                background-color: green;
+                color: lightgreen;
+                cursor: pointer;
+            }
+
+            @media #{$small-screen} {
+                width: 95%;
+            }
+        }
+    }
+}
